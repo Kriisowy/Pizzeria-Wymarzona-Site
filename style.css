@@ -9,7 +9,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #0056b3; /* Intensywny niebieski */
+    background-color: #003366; /* Intensywny niebieski */
     color: white;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -45,7 +45,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background-color: white;
-    color: #0056b3;
+    color: #003366;
 }
 
 /* Ikona hamburgera */
