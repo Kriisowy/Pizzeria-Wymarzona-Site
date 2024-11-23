@@ -8,18 +8,19 @@ header {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 15px 20px;
-    background-color: #007BFF; /* Niebieski header */
+    padding: 10px 20px;
+    background-color: #0056b3; /* Intensywny niebieski */
     color: white;
     position: relative;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
 header img {
-    height: 60px; /* Dopasowanie rozmiaru logo */
+    height: 70px; /* Ustawienie rozmiaru logo */
 }
 
 header .logo {
-    font-size: 2rem; /* Większy napis */
+    font-size: 2rem;
     font-weight: bold;
     color: yellow; /* Żółty napis */
     text-align: center;
@@ -31,7 +32,7 @@ header nav ul {
     margin: 0;
     padding: 0;
     display: flex;
-    gap: 20px; /* Odstępy między linkami */
+    gap: 15px;
 }
 
 header nav ul li a {
@@ -44,7 +45,7 @@ header nav ul li a {
 
 header nav ul li a:hover {
     background-color: white;
-    color: #007BFF; /* Niebieski tekst po najechaniu */
+    color: #0056b3;
 }
 
 /* Ikona hamburgera */
@@ -64,9 +65,9 @@ header nav .menu-toggle {
     header nav ul {
         display: none;
         flex-direction: column;
-        background-color: #007BFF; /* Kolor rozwijanego menu */
+        background-color: #0056b3; /* Kolor rozwijanego menu */
         position: absolute;
-        top: 70px;
+        top: 80px;
         right: 20px;
         width: 200px;
         border-radius: 5px;
@@ -86,4 +87,31 @@ header nav .menu-toggle {
         text-align: left;
         margin-left: 10px;
     }
+}
+
+/* Sekcja główna */
+section {
+    padding: 20px;
+    background-color: #f4f4f4; /* Jasne tło */
+    text-align: center;
+}
+
+section h1 {
+    font-size: 2rem;
+    color: #0056b3;
+}
+
+section p {
+    font-size: 1rem;
+    color: #333;
+}
+
+/* Stopka */
+footer {
+    text-align: center;
+    padding: 15px 20px;
+    background-color: #0056b3; /* Intensywny niebieski */
+    color: white;
+    margin-top: 20px;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
