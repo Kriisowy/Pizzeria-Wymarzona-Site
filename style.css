@@ -65,7 +65,7 @@ header nav .menu-toggle {
     header nav ul {
         display: none;
         flex-direction: column;
-        background-color: #003366; /* Kolor rozwijanego menu */
+        background-color: #004b97; /* Kolor rozwijanego menu */
         position: absolute;
         top: 80px;
         right: 20px;
