@@ -159,7 +159,6 @@ table.pizza-menu {
     background: linear-gradient(135deg, #f9f9f9, #e6e6e6) !important;/* Zastosowanie gradientu */
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
-    border-radius: 8px; /* Zaokrąglenie rogów tabeli */
 }
 
 /* Styl komórek tabeli */
