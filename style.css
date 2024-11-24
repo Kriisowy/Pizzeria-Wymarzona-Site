@@ -185,6 +185,51 @@ table.pizza-menu .pizza-description {
 .size{
     font-weight: bold; /* Pogrubienie tekstu */
 }
+/* Styl galerii */
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px; /* Odstępy między zdjęciami */
+    justify-content: center; /* Wyśrodkowanie zdjęć */
+    margin-top: 20px;
+}
+
+.gallery figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 5px solid #ccc; /* Ramka wokół zdjęcia */
+    padding: 10px;
+    background-color: #fff; /* Tło dla zdjęć */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lekki cień */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    max-width: 200px; /* Maksymalna szerokość dla zdjęć */
+    text-align: center;
+}
+
+.gallery img {
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #ccc; /* Linia oddzielająca zdjęcie od podpisu */
+}
+
+.gallery figcaption {
+    margin-top: 10px;
+    font-size: 0.9em;
+    color: #333;
+}
+
+/* Responsywność galerii */
+@media (max-width: 768px) {
+    .gallery {
+        gap: 10px;
+    }
+
+    .gallery figure {
+        max-width: 150px;
+    }
+}
+
 
 /* Stopka */
 footer {
