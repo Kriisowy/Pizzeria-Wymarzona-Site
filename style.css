@@ -25,7 +25,7 @@ header img {
 header nav ul {
     display: none;
     flex-direction: column;
-    background-color: #e3a214; /* Ten sam kolor co header */
+    background-color: #efac1a; /* Ten sam kolor co header */
     position: absolute;
     top: 70px;
     right: 20px;
@@ -87,29 +87,32 @@ header nav .menu-toggle {
     }
 }
 
-/* Sekcja główna */
+/* Sekcja główna z tłem */
 section {
-    padding: 20px;
-    background-color: #f4f4f4;
+    padding: 50px 20px; /* Margines wewnętrzny dla tekstu */
+    background-image: url('wnetrze.jpg'); /* Ustawienie tła */
+    background-size: cover; /* Obraz dopasowuje się do szerokości i wysokości sekcji */
+    background-position: center; /* Wyśrodkowanie obrazu */
+    background-repeat: no-repeat; /* Obraz nie powtarza się */
+    color: white; /* Tekst w kontrastowym kolorze */
     text-align: center;
+    min-height: 300px; /* Minimalna wysokość sekcji */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
 }
 
 section h1 {
-    font-size: 2rem;
-    color: #e3a214; /* Kolor tytułu */
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności tekstu */
 }
 
 section p {
-    font-size: 1rem;
-    color: #333;
-}
-
-section img {
-    max-width: 100%; /* Obrazek w pełni responsywny */
-    height: auto;
-    border-radius: 10px; /* Delikatne zaokrąglenie */
-    margin-top: 20px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtelny cień */
+    font-size: 1.2rem;
+    max-width: 600px;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności tekstu */
 }
 
 /* Stopka */
