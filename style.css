@@ -2,34 +2,29 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
-
-/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #e3a214; /* Złoty kolor */
+    background-color: #e3a214;
     color: white;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
-
 header img {
     max-width: 100%;
     height: auto;
-    max-height: 90px; /* Maksymalna wysokość logo na większych ekranach */
-    transition: all 0.3s ease; /* Płynne zmniejszanie */
+    max-height: 90px;
+    transition: all 0.3s ease;
 }
-
 header nav ul {
-    display: flex; /* Domyślnie menu jest widoczne */
+    display: flex;
     gap: 15px;
     list-style: none;
     margin: 0;
     padding: 0;
 }
-
 header nav ul li a {
     color: white;
     text-decoration: none;
@@ -37,166 +32,133 @@ header nav ul li a {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
-
 header nav ul li a:hover {
     background-color: white;
     color: black;
 }
-
 header nav .menu-toggle {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
     color: white;
 }
-
-/* Responsywne logo i rozwijane menu */
 @media (max-width: 768px) {
     header img {
-        max-height: 40px; /* Logo zmniejsza się na mniejszych ekranach */
+        max-height: 40px;
     }
-
     header nav ul {
-        display: none; /* Ukrycie menu na mniejszych ekranach */
+        display: none;
         flex-direction: column;
-        background-color: #e3a214; /* Kolor tła rozwijanego menu */
+        background-color: #e3a214;
         position: absolute;
-        top: 80px; /* Dopasowanie do zmniejszonego headera */
+        top: 80px;
         right: 20px;
-        width: auto; /* Dostosowanie szerokości do zawartości */
+        width: auto;
         border-radius: 5px;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
         padding: 5px 0;
     }
-
     header nav ul.active {
-        display: flex; /* Wyświetlanie menu po kliknięciu */
+        display: flex; 
     }
-
     header nav ul li {
-        width: 100%; /* Szerokość pozycji w menu */
+        width: 100%;
     }
-
     header nav ul li a {
         padding: 10px;
         text-align: center;
-        display: block; /* Elementy zajmują całą szerokość */
-        border-radius: 0; /* Usunięcie zaokrąglenia */
+        display: block;
+        border-radius: 0;
     }
-
     header nav ul li a:hover {
-        background-color: white; /* Tło podczas najechania */
+        background-color: white;
         color: black;
-        box-shadow: inset 0 0 0 2px #e3a214; /* Obramowanie w kolorze złotym */
+        box-shadow: inset 0 0 0 2px #e3a214;
     }
-
     header nav .menu-toggle {
-        display: block; /* Wyświetlanie ikony hamburgera */
+        display: block;
     }
 }
-
-/* Sekcja główna z tłem */
 section {
     padding: 0;
     margin: 0;
-    background-image: url('images/wnetrze.jpg'); /* Tło sekcji */
-    background-size: cover; /* Dopasowanie tła do rozmiaru sekcji, zachowując proporcje */
-    background-position: center; /* Wyśrodkowanie tła */
-    background-repeat: no-repeat; /* Zapobieganie powtarzaniu tła */
-    background-attachment: fixed; /* Tło nie przesuwa się podczas przewijania */
-    color: white; /* Kolor tekstu */
+    background-image: url('images/wnetrze.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: white;
     text-align: center;
-    min-height: 100vh; /* Sekcja zajmuje całą wysokość ekranu */
+    min-height: 100vh;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
 }
-
 section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności tekstu */
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
 }
-
 section p {
     font-size: 1.2rem;
     max-width: 600px;
-    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności tekstu */
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
 }
-
-/* Kontakt (zwiększenie mapy, pogrubienie tekstu i usunięcie kropek) */
 section ul {
-    list-style-type: none; /* Usunięcie kropek */
+    list-style-type: none;
     padding: 0;
 }
-
 section ul li {
-    font-size: 1.5rem; /* Większe litery */
-    margin-bottom: 10px; /* Odstęp między pozycjami */
+    font-size: 1.5rem;
+    margin-bottom: 10px;
 }
-
 section iframe {
-    width: 100%; /* Mapa rozciąga się na pełną szerokość kontenera */
-    height: auto; /* Wysokość dostosowuje się automatycznie */
-    max-width: 100%; /* Mapa nie przekroczy szerokości kontenera */
-    aspect-ratio: 16 / 9; /* Proporcje 16:9 */
+    width: 100%;
+    height: auto;
+    max-width: 100%;
+    aspect-ratio: 16 / 9;
     border: 0;
     margin-top: 30px;
-    margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
+    margin-bottom: 30px;
 }
-
-/* Mocniejsze białe tło bez gradientu */
 table.pizza-menu {
-    width: auto; /* Tabela nie zajmuje całej szerokości */
-    margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
-    margin-bottom: 20px; /* Dodany margines na dole tabeli */
-    border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
-    font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
-    
-    /* Białe tło */
-    background-color: rgba(191, 189, 189, 0.742); /* Mocne białe tło z lekką przezroczystością */
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
+    width: auto;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-collapse: collapse;
+    font-size: 1rem;
+    background-color: rgba(191, 189, 189, 0.742);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
-
-/* Styl komórek tabeli */
-table.pizza-menu th,
-table.pizza-menu td {
-    border: 1px solid #ddd; /* Cienka szara ramka wokół komórek */
-    padding: 10px; /* Daje trochę przestrzeni wokół tekstu w komórkach */
-    text-align: center; /* Centruje tekst w komórkach */
-    color: #333; /* Ciemniejszy kolor tekstu */
+table.pizza-menu th, table.pizza-menu td {
+    border: 1px solid #ddd;
+    padding: 10px;
+    text-align: center;
+    color: #333;
 }
-
-/* Styl nazw pizz */
 table.pizza-menu .pizza-name {
-    font-size: 1.4rem; /* Zwiększenie rozmiaru czcionki dla nazw pizz */
-    color: #333; /* Ciemniejszy kolor tekstu */
+    font-size: 1.4rem;
+    color: #333;
 }
-
-/* Styl składników pizz */
 table.pizza-menu .pizza-description {
-    font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
-    color: #333; /* Jaśniejszy kolor dla składników */
-    transition: none; /* Usunięcie efektu przejścia */
+    font-size: 1.2rem;
+    color: #333;
+    transition: none;
 }
-/* Dla komórek z wartością 32 cm */
 .size{
-    font-weight: bold; /* Pogrubienie tekstu */
+    font-weight: bold;
 }
-
 .video-container {
     position: relative;
     width: 100%;
-    max-width: 640px; /* Wideo na większych ekranach */
-    margin: 20px auto; /* Centrowanie wideo */
-    aspect-ratio: 16 / 9; /* Proporcje wideo */
+    max-width: 640px;
+    margin: 20px auto;
+    aspect-ratio: 16 / 9;
     overflow: hidden;
-    border-radius: 10px; /* Zaokrąglone rogi */
-    background-color: #000; /* Czarne tło */
+    border-radius: 10px;
+    background-color: #000;
 }
-
 .video-container video {
     position: absolute;
     top: 0;
@@ -204,28 +166,12 @@ table.pizza-menu .pizza-description {
     width: 100%;
     height: 100%;
 }
-
-/* Poprawka dla klikalności rozwijanego menu */
 header nav ul {
-    z-index: 10; /* Menu nad wideo */
+    z-index: 10;
 }
-
 .video-container {
-    z-index: 1; /* Wideo pod menu */
+    z-index: 1;
 }
-
-/* Styl galerii */
-/* Galeria */
-.gallery {
-    display: flex;
-    flex-wrap: wrap; /* Elementy zawijają się w razie potrzeby */
-    gap: 20px; /* Odstępy między zdjęciami */
-    justify-content: center; /* Wyśrodkowanie zdjęć w rzędach */
-    margin-top: 20px;
-}
-
-/* Galeria */
-/* Galeria */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -233,7 +179,13 @@ header nav ul {
     justify-content: center;
     margin-top: 20px;
 }
-
+.gallery {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    margin-top: 20px;
+}
 .gallery figure {
     display: flex;
     flex-direction: column;
@@ -250,51 +202,40 @@ header nav ul {
     gap: 10px;
     min-height: auto;
     height: auto;
-    transition: transform 0.3s ease; /* Dodano animację powiększenia */
+    transition: transform 0.3s ease;
 }
-
 .gallery img {
     width: 100%;
     height: auto;
     border-bottom: 3px solid #ccc;
-    transition: transform 0.3s ease; /* Dodano animację powiększenia zdjęcia */
+    transition: transform 0.3s ease;
 }
-
-/* Efekt powiększania zdjęcia */
 .gallery figure:hover {
-    transform: scale(1.2); /* Powiększenie ramki o 20% */
+    transform: scale(1.2);
 }
-
 .gallery img:hover {
-    transform: scale(1.5); /* Powiększenie zdjęcia o 20% */
+    transform: scale(1.5);
 }
-
-/* Responsywność galerii */
 @media (max-width: 1024px) {
     .gallery figure {
-        width: calc(100% / 3 - 20px); /* 3 kolumny na średnich ekranach */
+        width: calc(100% / 3 - 20px);
     }
 }
-
 @media (max-width: 768px) {
     .gallery figure {
-        width: calc(100% / 2 - 20px); /* 2 kolumny na małych ekranach */
+        width: calc(100% / 2 - 20px);
     }
 }
-
 @media (max-width: 480px) {
     .gallery figure {
-        width: calc(100% - 20px); /* 1 kolumna na bardzo małych ekranach */
+        width: calc(100% - 20px);
     }
 }
-
-
-/* Stopka */
 footer {
     text-align: center;
     padding: 15px 20px;
-    background-color: #e3a214; /* Ten sam kolor co header */
+    background-color: #e3a214;
     color: white;
-    margin-top: 0; /* Usunięcie białego paska */
+    margin-top: 0;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }

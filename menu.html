@@ -6,8 +6,8 @@
     <title>Menu - Pizzeria Wymarzona</title>
     <link rel="stylesheet" href="style.css">
 </head>
-<body>
 
+<body>
 <header>
     <img src="images/logo.png" alt="logo PZ">
     <nav>
@@ -214,25 +214,22 @@
         </tr>
         </table>
         </section>
-        <footer>
-            <p>&copy; 2024 Pizzeria Wymarzona. Wszystkie prawa zastrzeżone.</p>
-        </footer>
-        <script>
-        // Obsługa kliknięcia w ikonę hamburgera
-        const menuToggle = document.querySelector('.menu-toggle');
-        const navMenu = document.querySelector('header nav ul');
-        
-        menuToggle.addEventListener('click', () => {
-            navMenu.classList.toggle('active');
-        });
-        
-        // Zamknięcie menu, jeśli okno jest większe niż 768px
-        window.addEventListener('resize', () => {
-            if (window.innerWidth > 768) {
-                navMenu.classList.remove('active');
-            }
-        });
-        </script>
-        
-        </body>
-        </html>
+
+<footer>
+        <p>&copy; 2024 Pizzeria Wymarzona. Wszystkie prawa zastrzeżone.</p>
+</footer>
+
+<script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const navMenu = document.querySelector('header nav ul');
+    menuToggle.addEventListener('click', () => {
+        navMenu.classList.toggle('active');
+    });
+    window.addEventListener('resize', () => {
+        if (window.innerWidth > 768) {
+            navMenu.classList.remove('active');
+        }
+    });
+</script>
+</body>
+</html>
