@@ -124,6 +124,24 @@ section p {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności tekstu */
 }
 
+/* Kontakt (zwiększenie mapy, pogrubienie tekstu i usunięcie kropek) */
+section ul {
+    list-style-type: none; /* Usunięcie kropek */
+    padding: 0;
+}
+
+section ul li {
+    font-size: 1.5rem; /* Większe litery */
+    margin-bottom: 10px; /* Odstęp między pozycjami */
+}
+
+section iframe {
+    width: 100%; /* Zajmuje całą szerokość dostępnej przestrzeni */
+    height: 450px; /* Zwiększenie wysokości mapy */
+    border: 0;
+    margin-top: 20px; /* Odstęp między mapą a tekstem */
+}
+
 /* Stopka */
 footer {
     text-align: center;
