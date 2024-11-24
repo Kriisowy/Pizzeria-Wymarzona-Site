@@ -148,15 +148,15 @@ section iframe {
 }
 
 /* Styl dla cienkiej tabeli */
-table.tabelka {
+table.pizza-menu {
     width: auto; /* Tabela nie zajmuje całej szerokości */
     margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
     border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
 }
 
-table.tabelka th,
-table.tabelka td {
+table.pizza-menu th,
+table.pizza-menu td {
     border: 1px solid #fff; /* Cienka biała ramka wokół komórek */
     padding: 8px 12px; /* Mniejsze odstępy w komórkach */
     text-align: center; /* Centruje tekst w komórkach */
@@ -164,18 +164,18 @@ table.tabelka td {
 }
 
 /* Dostosowanie stylów dla nagłówków tabeli */
-table.tabelka th {
+table.pizza-menu th {
     background-color: #e3a214; /* Złoty kolor dla nagłówków */
     font-size: 1.1rem; /* Większy rozmiar czcionki dla nagłówków */
     text-transform: uppercase; /* Użycie wielkich liter */
 }
 
-table.tabelka .pizza-name {
+table.pizza-menu .pizza-name {
     font-size: 1.4rem; /* Zwiększenie rozmiaru czcionki dla nazw pizz */
     color: #fff;
 }
 
-table.tabelka .pizza-description {
+table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
     color: #ccc;
 }
