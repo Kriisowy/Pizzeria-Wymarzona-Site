@@ -183,7 +183,6 @@ table.pizza-menu .pizza-description {
 /* Dla komórek z wartością 32 cm */
 .size{
     font-weight: bold; /* Pogrubienie tekstu */
-    color: red; /* Czerwony kolor tekstu */
 }
 
 /* Stopka */
