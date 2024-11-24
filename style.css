@@ -193,10 +193,10 @@ table.pizza-menu .pizza-description {
     justify-content: center; /* Wyśrodkowanie zdjęć */
     margin-top: 20px;
 }
-
 .gallery figure {
     display: flex;
     flex-direction: column;
+    justify-content: space-between; /* Rozkłada elementy w ramce */
     align-items: center;
     border: 2px solid #ccc; /* Ramka wokół zdjęcia */
     padding: 10px;
@@ -205,18 +205,25 @@ table.pizza-menu .pizza-description {
     border-radius: 10px; /* Zaokrąglone rogi */
     max-width: 200px; /* Maksymalna szerokość dla zdjęć */
     text-align: center;
+    height: 300px; /* Stała wysokość ramki */
 }
 
 .gallery img {
     width: 100%;
     height: auto;
     border-bottom: 3px solid #ccc; /* Linia oddzielająca zdjęcie od podpisu */
+    flex-shrink: 0; /* Zapobiega zmniejszaniu obrazu */
 }
 
 .gallery figcaption {
     margin-top: 10px;
     font-size: 0.9em;
     color: #333;
+    flex-grow: 1; /* "Wypycha" podpis na dół */
+    display: flex;
+    align-items: flex-end; /* Wyrównanie tekstu do dołu */
+    justify-content: center; /* Wyśrodkowanie poziome podpisu */
+    text-align: center;
 }
 
 /* Responsywność galerii */
