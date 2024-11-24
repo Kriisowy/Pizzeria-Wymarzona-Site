@@ -136,12 +136,14 @@ section ul li {
 }
 
 section iframe {
-    width: 100%; /* Szerokość mapy dostosowuje się do dostępnej przestrzeni */
-    max-width: 650px; /* Maksymalna szerokość mapy - zostanie ograniczona do tej wartości */
-    height: 350px; /* Ustawiona stała wysokość */
+    width: 100%; /* Szerokość dostosowana do dostępnej przestrzeni */
+    max-width: 100%; /* Szerokość mapy będzie dostosowywać się do szerokości kontenera */
+    height: 0; /* Ustawiamy na 0, ponieważ będziemy używać proporcji */
+    padding-bottom: 56.25%; /* Proporcje 16:9 (wysokość w procentach względem szerokości) */
+    position: relative; /* Umożliwia zachowanie proporcji */
     border: 0;
     margin-top: 30px;
-    margin-bottom: 30px; /* Odstęp między mapą a tekstem */
+    margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
 }
 
 
