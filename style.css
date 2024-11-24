@@ -185,6 +185,25 @@ table.pizza-menu .pizza-description {
 .size{
     font-weight: bold; /* Pogrubienie tekstu */
 }
+.video-container {
+    position: relative;
+    width: 100%; /* Wideo zajmuje całą szerokość kontenera */
+    padding-bottom: 56.25%; /* Proporcje 16:9 */
+    overflow: hidden;
+    border: 2px solid #ccc; /* Opcjonalnie: ramka wokół wideo */
+    border-radius: 10px; /* Opcjonalnie: zaokrąglenie rogów */
+    background-color: #000; /* Opcjonalnie: czarne tło przed załadowaniem wideo */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcjonalnie: cień */
+}
+
+.video-container video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; /* Wideo dopasowuje się do szerokości kontenera */
+    height: 100%; /* Wideo zachowuje odpowiednie proporcje */
+}
+
 /* Styl galerii */
 .gallery {
     display: flex;
