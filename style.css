@@ -155,7 +155,7 @@ table.pizza-menu {
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
     
     /* Białe tło */
-    background-color: rgba(255, 255, 255, 0.95); /* Mocne białe tło z lekką przezroczystością */
+    background-color: rgba(191, 189, 189, 0.742); /* Mocne białe tło z lekką przezroczystością */
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
 }
@@ -167,13 +167,6 @@ table.pizza-menu td {
     padding: 10px; /* Daje trochę przestrzeni wokół tekstu w komórkach */
     text-align: center; /* Centruje tekst w komórkach */
     color: #333; /* Ciemniejszy kolor tekstu */
-}
-
-/* Styl nagłówków tabeli */
-table.pizza-menu th {
-    background-color: #e3a214; /* Złoty kolor dla nagłówków */
-    font-size: 1.1rem; /* Większy rozmiar czcionki dla nagłówków */
-    text-transform: uppercase; /* Użycie wielkich liter */
 }
 
 /* Styl nazw pizz */
