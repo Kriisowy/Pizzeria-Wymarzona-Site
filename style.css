@@ -146,6 +146,25 @@ section iframe {
     margin-top: 30px;
     margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
 }
+/* Styl dla cienkiej tabeli */
+table.tabelka {
+    width: 100%; /* Tabela zajmuje całą szerokość dostępnego miejsca */
+    border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
+    margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
+}
+
+table.tabelka td {
+    border: 1px solid white; /* Cienka biała ramka wokół komórek */
+    padding: 10px; /* Daje trochę przestrzeni wokół tekstu w komórkach */
+    text-align: center; /* Centruje tekst w komórkach */
+    color: white; /* Kolor tekstu w tabeli (można dostosować do tła) */
+}
+
+/* Dostosowanie stylów dla nagłówków tabeli */
+table.tabelka h3 {
+    margin: 0; /* Usunięcie marginesu, aby nagłówki były blisko komórek */
+    color: white;
+}
 
 
 /* Stopka */
