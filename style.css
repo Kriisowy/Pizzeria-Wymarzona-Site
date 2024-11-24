@@ -9,7 +9,7 @@ header {
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #003366; /* Intensywny niebieski, teraz taki sam jak footer */
+    background-color: #e3a214;
     color: white;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
@@ -65,7 +65,7 @@ header nav .menu-toggle {
     header nav ul {
         display: none;
         flex-direction: column;
-        background-color: #003366; /* Zmieniono na ten sam kolor co w headerze */
+        background-color: #e1ad3e;
         position: absolute;
         top: 80px;
         right: 20px;
@@ -98,7 +98,7 @@ section {
 
 section h1 {
     font-size: 2rem;
-    color: #003366;
+    color: #e3a214;
 }
 
 section p {
@@ -110,7 +110,7 @@ section p {
 footer {
     text-align: center;
     padding: 15px 20px;
-    background-color: #003366; /* Intensywny niebieski - taki sam jak header */
+    background-color: #e3a214; /* Intensywny niebieski - taki sam jak header */
     color: white;
     margin-top: 20px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
