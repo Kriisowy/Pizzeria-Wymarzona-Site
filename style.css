@@ -154,8 +154,11 @@ table.pizza-menu {
     margin-bottom: 20px; /* Dodany margines na dole tabeli */
     border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
-    background-color: #fafafa; /* Bardzo jasny szary kolor tła */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lekki cień wokół tabeli */
+    
+    /* Gradient tła */
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6); /* Zastosowanie gradientu */
+    
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
     border-radius: 8px; /* Zaokrąglenie rogów tabeli */
 }
 
@@ -186,6 +189,7 @@ table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
     color: #777; /* Jaśniejszy kolor dla składników */
 }
+
 /* Stopka */
 footer {
     text-align: center;
