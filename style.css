@@ -23,16 +23,11 @@ header img {
 }
 
 header nav ul {
-    display: none;
-    flex-direction: column;
-    background-color: #efac1a; /* Ten sam kolor co header */
-    position: absolute;
-    top: 70px;
-    right: 20px;
-    width: 200px;
-    border-radius: 5px;
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
-    z-index: 10; /* Zapobiega zasłanianiu */
+    display: flex; /* Domyślnie menu jest widoczne */
+    gap: 15px;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 header nav ul li a {
@@ -61,12 +56,8 @@ header nav .menu-toggle {
         max-height: 40px; /* Logo zmniejsza się na mniejszych ekranach */
     }
 
-    header nav .menu-toggle {
-        display: block; /* Wyświetlanie ikony hamburgera */
-    }
-
     header nav ul {
-        display: none; /* Ukrycie menu na starcie */
+        display: none; /* Ukrycie menu na mniejszych ekranach */
         flex-direction: column;
         background-color: #e3a214; /* Kolor tła rozwijanego menu */
         position: absolute;
@@ -85,18 +76,23 @@ header nav .menu-toggle {
         padding: 10px;
         text-align: center;
     }
+
+    header nav .menu-toggle {
+        display: block; /* Wyświetlanie ikony hamburgera */
+    }
 }
 
 /* Sekcja główna z tłem */
 section {
-    padding: 50px 20px; /* Margines wewnętrzny dla tekstu */
-    background-image: url('wnetrze.jpg'); /* Ustawienie tła */
-    background-size: cover; /* Obraz dopasowuje się do szerokości i wysokości sekcji */
-    background-position: center; /* Wyśrodkowanie obrazu */
-    background-repeat: no-repeat; /* Obraz nie powtarza się */
-    color: white; /* Tekst w kontrastowym kolorze */
+    padding: 0;
+    margin: 0;
+    background-image: url('wnetrze.jpg'); /* Tło sekcji */
+    background-size: cover; /* Zdjęcie dopasowuje się do sekcji */
+    background-position: center; /* Wyśrodkowanie zdjęcia */
+    background-repeat: no-repeat; /* Bez powtarzania obrazu */
+    color: white; /* Kolor tekstu */
     text-align: center;
-    min-height: 300px; /* Minimalna wysokość sekcji */
+    min-height: 100vh; /* Sekcja zajmuje całą wysokość ekranu */
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -121,6 +117,6 @@ footer {
     padding: 15px 20px;
     background-color: #e3a214; /* Ten sam kolor co header */
     color: white;
-    margin-top: 20px;
+    margin-top: 0; /* Usunięcie białego paska */
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
