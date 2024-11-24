@@ -146,9 +146,7 @@ section iframe {
     margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
 }
 
-/* Styl dla tabeli pizza-menu */
-/* Styl dla tabeli pizza-menu */
-/* Opcja 1: Subtelne tło w odcieniu jasnoszarym z cieniem */
+/* Mocniejsze białe tło bez gradientu */
 table.pizza-menu {
     width: auto; /* Tabela nie zajmuje całej szerokości */
     margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
@@ -156,11 +154,10 @@ table.pizza-menu {
     border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
     
-    /* Gradient tła */
-    background: linear-gradient(135deg, #f9f9f9, #e6e6e6) !important; /* Użycie gradientu z obowiązkowym zastosowaniem */
+    /* Białe tło */
+    background-color: rgba(255, 255, 255, 0.95); /* Mocne białe tło z lekką przezroczystością */
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
-    border-radius: 8px; /* Zaokrąglenie rogów tabeli */
 }
 
 /* Styl komórek tabeli */
