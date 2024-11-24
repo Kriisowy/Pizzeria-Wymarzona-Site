@@ -146,26 +146,39 @@ section iframe {
     margin-top: 30px;
     margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
 }
+
 /* Styl dla cienkiej tabeli */
 table.tabelka {
-    width: 100%; /* Tabela zajmuje całą szerokość dostępnego miejsca */
-    border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
+    width: auto; /* Tabela nie zajmuje całej szerokości */
     margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
+    border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
+    font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
 }
 
+table.tabelka th,
 table.tabelka td {
-    border: 1px solid white; /* Cienka biała ramka wokół komórek */
-    padding: 10px; /* Daje trochę przestrzeni wokół tekstu w komórkach */
+    border: 1px solid #fff; /* Cienka biała ramka wokół komórek */
+    padding: 8px 12px; /* Mniejsze odstępy w komórkach */
     text-align: center; /* Centruje tekst w komórkach */
     color: white; /* Kolor tekstu w tabeli (można dostosować do tła) */
 }
 
 /* Dostosowanie stylów dla nagłówków tabeli */
-table.tabelka h3 {
-    margin: 0; /* Usunięcie marginesu, aby nagłówki były blisko komórek */
-    color: white;
+table.tabelka th {
+    background-color: #e3a214; /* Złoty kolor dla nagłówków */
+    font-size: 1.1rem; /* Większy rozmiar czcionki dla nagłówków */
+    text-transform: uppercase; /* Użycie wielkich liter */
 }
 
+table.tabelka .pizza-name {
+    font-size: 1.4rem; /* Zwiększenie rozmiaru czcionki dla nazw pizz */
+    color: #fff;
+}
+
+table.tabelka .pizza-description {
+    font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
+    color: #ccc;
+}
 
 /* Stopka */
 footer {
