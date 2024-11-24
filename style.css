@@ -39,6 +39,12 @@ header nav .menu-toggle {
     font-size: 1.5rem;
     color: white;
 }
+#responsive-img {
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto;
+}
 /* Responsywność */
 @media (max-width: 768px) {
     header nav .menu-toggle {
