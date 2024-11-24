@@ -228,52 +228,45 @@ header nav ul {
 /* Galeria */
 .gallery {
     display: flex;
-    flex-wrap: wrap; /* Elementy zawijają się w razie potrzeby */
-    gap: 20px; /* Odstępy między zdjęciami */
-    justify-content: center; /* Wyśrodkowanie zdjęć w rzędach */
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
     margin-top: 20px;
 }
 
 .gallery figure {
     display: flex;
-    flex-direction: column; /* Obraz na górze, podpis na dole */
-    justify-content: space-between; /* Rozkład elementów w ramce */
+    flex-direction: column;
+    justify-content: space-between;
     align-items: center;
-    border: 2px solid #ccc; /* Ramka wokół zdjęcia */
+    border: 2px solid #ccc;
     padding: 10px;
     background-color: rgba(191, 189, 189, 0.742);
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Lekki cień */
-    border-radius: 10px; /* Zaokrąglone rogi */
-    width: calc(100% / 4 - 30px); /* Szerokość dopasowana do ekranu (4 kolumny) */
-    max-width: 200px; /* Maksymalna szerokość dla zdjęć */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    width: calc(100% / 4 - 30px);
+    max-width: 200px;
     text-align: center;
-    gap: 10px; /* Odstęp między obrazem a podpisem */
-    min-height: auto; /* Dopasowanie wysokości ramki */
-    height: auto; /* Ramka dostosowuje się do zawartości */
-    transition: transform 0.3s ease; /* Płynne powiększanie */
+    gap: 10px;
+    min-height: auto;
+    height: auto;
+    transition: transform 0.3s ease; /* Dodano animację powiększenia */
 }
 
 .gallery img {
-    width: 100%; /* Zdjęcie zajmuje całą szerokość kontenera */
-    height: auto; /* Zachowanie proporcji zdjęcia */
-    border-bottom: 3px solid #ccc; /* Linia oddzielająca zdjęcie od podpisu */
-    transition: transform 0.3s ease; /* Płynne powiększanie zdjęcia */
+    width: 100%;
+    height: auto;
+    border-bottom: 3px solid #ccc;
+    transition: transform 0.3s ease; /* Dodano animację powiększenia zdjęcia */
 }
 
-.gallery figcaption {
-    font-size: 0.9em; /* Zmniejszenie czcionki podpisu */
-    color: #333;
-    text-align: center;
-}
-
-/* Efekt powiększania zdjęcia po najechaniu */
+/* Efekt powiększania zdjęcia */
 .gallery figure:hover {
-    transform: scale(1.05); /* Powiększenie ramki o 5% */
-    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Zwiększenie cienia przy powiększeniu */
+    transform: scale(1.2); /* Powiększenie ramki o 20% */
 }
 
 .gallery img:hover {
-    transform: scale(1.05); /* Powiększenie samego zdjęcia o 5% */
+    transform: scale(1.2); /* Powiększenie zdjęcia o 20% */
 }
 
 /* Responsywność galerii */
