@@ -205,24 +205,19 @@ table.pizza-menu .pizza-description {
     border-radius: 10px; /* Zaokrąglone rogi */
     max-width: 200px; /* Maksymalna szerokość dla zdjęć */
     text-align: center;
-    height: 300px; /* Stała wysokość ramki */
+    min-height: 250px; /* Minimalna wysokość dla ramki */
 }
 
 .gallery img {
     width: 100%;
     height: auto;
     border-bottom: 3px solid #ccc; /* Linia oddzielająca zdjęcie od podpisu */
-    flex-shrink: 0; /* Zapobiega zmniejszaniu obrazu */
 }
 
 .gallery figcaption {
-    margin-top: 10px;
+    margin-top: auto; /* Wypycha podpis na dół */
     font-size: 0.9em;
     color: #333;
-    flex-grow: 1; /* "Wypycha" podpis na dół */
-    display: flex;
-    align-items: flex-end; /* Wyrównanie tekstu do dołu */
-    justify-content: center; /* Wyśrodkowanie poziome podpisu */
     text-align: center;
 }
 
