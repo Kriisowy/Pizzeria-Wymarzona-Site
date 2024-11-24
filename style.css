@@ -31,7 +31,7 @@ header nav ul li a {
 }
 header nav ul li a:hover {
     background-color: white;
-    color: #003366;
+    color: black;
 }
 header nav .menu-toggle {
     display: none;
