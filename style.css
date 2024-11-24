@@ -136,11 +136,10 @@ section ul li {
 }
 
 section iframe {
-    width: 100%; /* Szerokość dostosowana do dostępnej przestrzeni */
-    max-width: 100%; /* Szerokość mapy będzie dostosowywać się do szerokości kontenera */
-    height: 0; /* Ustawiamy na 0, ponieważ będziemy używać proporcji */
-    padding-bottom: 56.25%; /* Proporcje 16:9 (wysokość w procentach względem szerokości) */
-    position: relative; /* Umożliwia zachowanie proporcji */
+    width: 100%; /* Mapa rozciąga się na pełną szerokość kontenera */
+    height: auto; /* Wysokość dostosowuje się automatycznie */
+    max-width: 100%; /* Mapa nie przekroczy szerokości kontenera */
+    aspect-ratio: 16 / 9; /* Proporcje 16:9 */
     border: 0;
     margin-top: 30px;
     margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
