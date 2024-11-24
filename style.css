@@ -147,6 +147,7 @@ section iframe {
 }
 
 /* Styl dla tabeli pizza-menu */
+/* Styl dla tabeli pizza-menu */
 /* Opcja 1: Subtelne tło w odcieniu jasnoszarym z cieniem */
 table.pizza-menu {
     width: auto; /* Tabela nie zajmuje całej szerokości */
@@ -156,9 +157,10 @@ table.pizza-menu {
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
     
     /* Gradient tła */
-    background: linear-gradient(135deg, #f9f9f9, #e6e6e6) !important;/* Zastosowanie gradientu */
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6) !important; /* Użycie gradientu z obowiązkowym zastosowaniem */
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
+    border-radius: 8px; /* Zaokrąglenie rogów tabeli */
 }
 
 /* Styl komórek tabeli */
@@ -188,6 +190,7 @@ table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
     color: #777; /* Jaśniejszy kolor dla składników */
 }
+
 
 /* Stopka */
 footer {
