@@ -100,9 +100,10 @@ section {
     padding: 0;
     margin: 0;
     background-image: url('wnetrze.jpg'); /* Tło sekcji */
-    background-size: cover; /* Zdjęcie dopasowuje się do sekcji */
-    background-position: center; /* Wyśrodkowanie zdjęcia */
-    background-repeat: no-repeat; /* Bez powtarzania obrazu */
+    background-size: cover; /* Dopasowanie tła do rozmiaru sekcji, zachowując proporcje */
+    background-position: center; /* Wyśrodkowanie tła */
+    background-repeat: no-repeat; /* Zapobieganie powtarzaniu tła */
+    background-attachment: fixed; /* Tło nie przesuwa się podczas przewijania */
     color: white; /* Kolor tekstu */
     text-align: center;
     min-height: 100vh; /* Sekcja zajmuje całą wysokość ekranu */
@@ -111,6 +112,7 @@ section {
     justify-content: center;
     align-items: center;
 }
+
 
 section h1 {
     font-size: 2.5rem;
