@@ -151,6 +151,7 @@ section iframe {
 table.pizza-menu {
     width: auto; /* Tabela nie zajmuje całej szerokości */
     margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
+    margin-bottom: 20px;
     border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
 }
