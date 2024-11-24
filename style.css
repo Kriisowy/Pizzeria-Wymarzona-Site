@@ -99,7 +99,7 @@ header nav .menu-toggle {
 section {
     padding: 0;
     margin: 0;
-    background-image: url('wnetrze.jpg'); /* Tło sekcji */
+    background-image: url('images/wnetrze.jpg'); /* Tło sekcji */
     background-size: cover; /* Dopasowanie tła do rozmiaru sekcji, zachowując proporcje */
     background-position: center; /* Wyśrodkowanie tła */
     background-repeat: no-repeat; /* Zapobieganie powtarzaniu tła */
