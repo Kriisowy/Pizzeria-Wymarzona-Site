@@ -1,22 +1,21 @@
-
 <!DOCTYPE html>
 <html lang="pl">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Kontakt - SOLID-BUD</title>
+    <title>Strona Główna - Pizzeria Wymarzona</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <header>
-    <div class="logo">SOLID-BUD</div>
+    <img src="logo.png" alt="logo PZ">
     <nav>
+        <span class="menu-toggle">☰</span>
         <ul>
             <li><a href="index.html">Strona główna</a></li>
-            <li><a href="onas.html">O nas</a></li>
+            <li><a href="menu.html">Menu</a></li>
             <li><a href="galeria.html">Galeria</a></li>
-            <li><a href="oferta.html">Oferta</a></li>
             <li><a href="kontakt.html">Kontakt</a></li>
         </ul>
     </nav>
@@ -26,15 +25,30 @@
     <h1>Kontakt</h1>
     <p>Skontaktuj się z nami:</p>
     <ul>
-        <li>Telefon: +48 123 456 789</li>
-        <li>Email: biuro@solid-bud.pl</li>
-        <li>Adres: ul. Budowlana 10, 00-001 Warszawa</li>
+        <li>Telefon: +48 605 046 474</li>
+        <li>Adres: Cergowa 302, 38-450 Dukla</li>
     </ul>
 </section>
 
 <footer>
-    <p>&copy; 2024 SOLID-BUD. Wszystkie prawa zastrzeżone.</p>
+    <p>&copy; 2024 Pizzeria Wymarzona. Wszystkie prawa zastrzeżone.</p>
 </footer>
+<script>
+// Obsługa kliknięcia w ikonę hamburgera
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('header nav ul');
+
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
+
+// Zamknięcie menu, jeśli okno jest większe niż 768px
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('active');
+    }
+});
+</script>
 
 </body>
 </html>
