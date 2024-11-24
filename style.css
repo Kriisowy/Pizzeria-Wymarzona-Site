@@ -179,6 +179,7 @@ table.pizza-menu .pizza-name {
 table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
     color: #777; /* Jaśniejszy kolor dla składników */
+    transition: none; /* Usunięcie efektu przejścia */
 }
 /* Dla komórek z wartością 32 cm */
 .size{
