@@ -156,7 +156,7 @@ table.pizza-menu {
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
     
     /* Gradient tła */
-    background: linear-gradient(135deg, #f9f9f9, #e6e6e6); /* Zastosowanie gradientu */
+    background: linear-gradient(135deg, #f9f9f9, #e6e6e6) !important;/* Zastosowanie gradientu */
     
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
     border-radius: 8px; /* Zaokrąglenie rogów tabeli */
