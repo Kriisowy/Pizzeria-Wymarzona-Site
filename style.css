@@ -215,17 +215,10 @@ header nav ul {
 }
 
 /* Styl galerii */
-.gallery {
-    display: flex;
-    flex-wrap: wrap;
-    gap: 20px; /* Odstępy między zdjęciami */
-    justify-content: center; /* Wyśrodkowanie zdjęć */
-    margin-top: 20px;
-}
 .gallery figure {
     display: flex;
     flex-direction: column;
-    justify-content: flex-start; /* Ustawienie zawartości u góry ramki */
+    justify-content: flex-start; /* Obraz i tekst zaczynają się od góry */
     align-items: center;
     border: 2px solid #ccc; /* Ramka wokół zdjęcia */
     padding: 10px;
@@ -234,9 +227,9 @@ header nav ul {
     border-radius: 10px; /* Zaokrąglone rogi */
     max-width: 200px; /* Maksymalna szerokość dla zdjęć */
     text-align: center;
-    min-height: auto; /* Automatyczna wysokość ramki */
-    height: auto; /* Zapobiega rozciąganiu */
+    height: auto; /* Ramka dopasowuje się do zawartości */
     gap: 10px; /* Odstęp między obrazem a podpisem */
+    min-height: 250px; /* Minimalna wysokość dla zachowania spójności */
 }
 
 .gallery img {
@@ -246,7 +239,7 @@ header nav ul {
 }
 
 .gallery figcaption {
-    margin-top: 10px; /* Drobny odstęp od obrazu */
+    margin-top: auto; /* Wypycha podpis na dół ramki */
     font-size: 0.9em; /* Zmniejszenie czcionki podpisu */
     color: #333;
     text-align: center;
