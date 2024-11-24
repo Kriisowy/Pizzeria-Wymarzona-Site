@@ -215,10 +215,19 @@ header nav ul {
 }
 
 /* Styl galerii */
+/* Galeria */
+.gallery {
+    display: flex;
+    flex-wrap: wrap; /* Elementy zawijają się w razie potrzeby */
+    gap: 20px; /* Odstępy między zdjęciami */
+    justify-content: center; /* Wyśrodkowanie zdjęć w rzędach */
+    margin-top: 20px;
+}
+
 .gallery figure {
     display: flex;
-    flex-direction: column;
-    justify-content: flex-start; /* Obraz i tekst zaczynają się od góry */
+    flex-direction: column; /* Obraz na górze, podpis na dole */
+    justify-content: space-between; /* Rozkład elementów w ramce */
     align-items: center;
     border: 2px solid #ccc; /* Ramka wokół zdjęcia */
     padding: 10px;
@@ -247,13 +256,14 @@ header nav ul {
 
 /* Responsywność galerii */
 @media (max-width: 768px) {
+    .gallery {
+        gap: 10px; /* Mniejsze odstępy na mniejszych ekranach */
+    }
+
     .gallery figure {
-        max-width: 150px; /* Zmniejszenie szerokości ramek na małych ekranach */
-        gap: 5px; /* Mniejszy odstęp między elementami w ramce */
+        max-width: 150px; /* Zmniejszenie szerokości ramek */
     }
 }
-
-
 
 /* Stopka */
 footer {
