@@ -147,25 +147,25 @@ section iframe {
 }
 
 /* Styl dla tabeli pizza-menu */
-/* Opcja 2: Jasne tło z lekkim gradientem i bardziej wyrazisty cień */
+/* Opcja 1: Subtelne tło w odcieniu jasnoszarym z cieniem */
 table.pizza-menu {
     width: auto; /* Tabela nie zajmuje całej szerokości */
     margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
     margin-bottom: 20px; /* Dodany margines na dole tabeli */
     border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
-    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Jasny gradient od bieli do szarości */
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Większy cień wokół tabeli dla wyrazistości */
+    background-color: #fafafa; /* Bardzo jasny szary kolor tła */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1); /* Lekki cień wokół tabeli */
     border-radius: 8px; /* Zaokrąglenie rogów tabeli */
 }
 
 /* Styl komórek tabeli */
 table.pizza-menu th,
 table.pizza-menu td {
-    border: 1px solid #ccc; /* Bardziej wyraźna szara ramka wokół komórek */
-    padding: 12px; /* Większe odstępy wokół tekstu w komórkach */
+    border: 1px solid #ddd; /* Cienka szara ramka wokół komórek */
+    padding: 10px; /* Daje trochę przestrzeni wokół tekstu w komórkach */
     text-align: center; /* Centruje tekst w komórkach */
-    color: #444; /* Ciemniejszy kolor tekstu */
+    color: #333; /* Ciemniejszy kolor tekstu */
 }
 
 /* Styl nagłówków tabeli */
@@ -186,7 +186,6 @@ table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
     color: #777; /* Jaśniejszy kolor dla składników */
 }
-
 /* Stopka */
 footer {
     text-align: center;
