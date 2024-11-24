@@ -113,7 +113,6 @@ section {
     align-items: center;
 }
 
-
 section h1 {
     font-size: 2.5rem;
     margin-bottom: 20px;
@@ -147,38 +146,45 @@ section iframe {
     margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
 }
 
-/* Styl dla cienkiej tabeli */
+/* Styl dla tabeli pizza-menu */
+/* Opcja 2: Jasne tło z lekkim gradientem i bardziej wyrazisty cień */
 table.pizza-menu {
     width: auto; /* Tabela nie zajmuje całej szerokości */
     margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
-    margin-bottom: 20px;
+    margin-bottom: 20px; /* Dodany margines na dole tabeli */
     border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
     font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
+    background: linear-gradient(135deg, #f5f5f5, #e0e0e0); /* Jasny gradient od bieli do szarości */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Większy cień wokół tabeli dla wyrazistości */
+    border-radius: 8px; /* Zaokrąglenie rogów tabeli */
 }
 
+/* Styl komórek tabeli */
 table.pizza-menu th,
 table.pizza-menu td {
-    border: 1px solid #fff; /* Cienka biała ramka wokół komórek */
-    padding: 8px 12px; /* Mniejsze odstępy w komórkach */
+    border: 1px solid #ccc; /* Bardziej wyraźna szara ramka wokół komórek */
+    padding: 12px; /* Większe odstępy wokół tekstu w komórkach */
     text-align: center; /* Centruje tekst w komórkach */
-    color: white; /* Kolor tekstu w tabeli (można dostosować do tła) */
+    color: #444; /* Ciemniejszy kolor tekstu */
 }
 
-/* Dostosowanie stylów dla nagłówków tabeli */
+/* Styl nagłówków tabeli */
 table.pizza-menu th {
     background-color: #e3a214; /* Złoty kolor dla nagłówków */
     font-size: 1.1rem; /* Większy rozmiar czcionki dla nagłówków */
     text-transform: uppercase; /* Użycie wielkich liter */
 }
 
+/* Styl nazw pizz */
 table.pizza-menu .pizza-name {
     font-size: 1.4rem; /* Zwiększenie rozmiaru czcionki dla nazw pizz */
-    color: #fff;
+    color: #333; /* Ciemniejszy kolor tekstu */
 }
 
+/* Styl składników pizz */
 table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
-    color: #ccc;
+    color: #777; /* Jaśniejszy kolor dla składników */
 }
 
 /* Stopka */
