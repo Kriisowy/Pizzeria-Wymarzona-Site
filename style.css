@@ -180,6 +180,17 @@ table.pizza-menu .pizza-description {
     font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
     color: #777; /* Jaśniejszy kolor dla składników */
 }
+/* Dla komórek z wartością 32 cm */
+table.pizza-menu td:contains("32 cm") {
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: red; /* Czerwony kolor tekstu */
+}
+
+/* Dla komórek z wartością 45 cm */
+table.pizza-menu td:contains("45 cm") {
+    font-weight: bold; /* Pogrubienie tekstu */
+    color: red; /* Czerwony kolor tekstu */
+}
 
 
 /* Stopka */
