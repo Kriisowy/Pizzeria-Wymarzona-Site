@@ -225,6 +225,7 @@ header nav ul {
 }
 
 /* Galeria */
+/* Galeria */
 .gallery {
     display: flex;
     flex-wrap: wrap; /* Elementy zawijają się w razie potrzeby */
@@ -249,18 +250,30 @@ header nav ul {
     gap: 10px; /* Odstęp między obrazem a podpisem */
     min-height: auto; /* Dopasowanie wysokości ramki */
     height: auto; /* Ramka dostosowuje się do zawartości */
+    transition: transform 0.3s ease; /* Płynne powiększanie */
 }
 
 .gallery img {
     width: 100%; /* Zdjęcie zajmuje całą szerokość kontenera */
     height: auto; /* Zachowanie proporcji zdjęcia */
     border-bottom: 3px solid #ccc; /* Linia oddzielająca zdjęcie od podpisu */
+    transition: transform 0.3s ease; /* Płynne powiększanie zdjęcia */
 }
 
 .gallery figcaption {
     font-size: 0.9em; /* Zmniejszenie czcionki podpisu */
     color: #333;
     text-align: center;
+}
+
+/* Efekt powiększania zdjęcia po najechaniu */
+.gallery figure:hover {
+    transform: scale(1.05); /* Powiększenie ramki o 5% */
+    box-shadow: 0 8px 12px rgba(0, 0, 0, 0.15); /* Zwiększenie cienia przy powiększeniu */
+}
+
+.gallery img:hover {
+    transform: scale(1.05); /* Powiększenie samego zdjęcia o 5% */
 }
 
 /* Responsywność galerii */
@@ -281,6 +294,7 @@ header nav ul {
         width: calc(100% - 20px); /* 1 kolumna na bardzo małych ekranach */
     }
 }
+
 
 /* Stopka */
 footer {
