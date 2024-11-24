@@ -11,7 +11,9 @@ header {
     padding: 10px 20px;
     background-color: #e3a214; /* Złoty kolor */
     color: white;
-    position: relative;
+    position: sticky; /* Pozostaje widoczny na górze */
+    top: 0;
+    z-index: 100; /* Wyższy priorytet niż inne elementy */
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -61,7 +63,7 @@ header nav .menu-toggle {
         flex-direction: column;
         background-color: #e3a214; /* Kolor tła rozwijanego menu */
         position: absolute;
-        top: 80px; /* Dopasowanie do zmniejszonego headera */
+        top: 100%; /* Dopasowanie do wysokości headera */
         right: 20px;
         width: auto; /* Dostosowanie szerokości do zawartości */
         border-radius: 5px;
@@ -125,86 +127,36 @@ section p {
     text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Cień dla lepszej widoczności tekstu */
 }
 
-/* Kontakt (zwiększenie mapy, pogrubienie tekstu i usunięcie kropek) */
-section ul {
-    list-style-type: none; /* Usunięcie kropek */
-    padding: 0;
-}
-
-section ul li {
-    font-size: 1.5rem; /* Większe litery */
-    margin-bottom: 10px; /* Odstęp między pozycjami */
-}
-
-section iframe {
-    width: 100%; /* Mapa rozciąga się na pełną szerokość kontenera */
-    height: auto; /* Wysokość dostosowuje się automatycznie */
-    max-width: 100%; /* Mapa nie przekroczy szerokości kontenera */
-    aspect-ratio: 16 / 9; /* Proporcje 16:9 */
-    border: 0;
-    margin-top: 30px;
-    margin-bottom: 30px; /* Odstęp między mapą a innymi elementami */
-}
-
-/* Mocniejsze białe tło bez gradientu */
-table.pizza-menu {
-    width: auto; /* Tabela nie zajmuje całej szerokości */
-    margin-top: 20px; /* Daje trochę przestrzeni nad tabelą */
-    margin-bottom: 20px; /* Dodany margines na dole tabeli */
-    border-collapse: collapse; /* Zmniejsza odstępy między komórkami */
-    font-size: 1rem; /* Zmniejsza rozmiar czcionki w tabeli */
-    
-    /* Białe tło */
-    background-color: rgba(191, 189, 189, 0.742); /* Mocne białe tło z lekką przezroczystością */
-    
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Większy cień wokół tabeli */
-}
-
-/* Styl komórek tabeli */
-table.pizza-menu th,
-table.pizza-menu td {
-    border: 1px solid #ddd; /* Cienka szara ramka wokół komórek */
-    padding: 10px; /* Daje trochę przestrzeni wokół tekstu w komórkach */
-    text-align: center; /* Centruje tekst w komórkach */
-    color: #333; /* Ciemniejszy kolor tekstu */
-}
-
-/* Styl nazw pizz */
-table.pizza-menu .pizza-name {
-    font-size: 1.4rem; /* Zwiększenie rozmiaru czcionki dla nazw pizz */
-    color: #333; /* Ciemniejszy kolor tekstu */
-}
-
-/* Styl składników pizz */
-table.pizza-menu .pizza-description {
-    font-size: 1.2rem; /* Zwiększenie rozmiaru czcionki dla składników */
-    color: #333; /* Jaśniejszy kolor dla składników */
-    transition: none; /* Usunięcie efektu przejścia */
-}
-/* Dla komórek z wartością 32 cm */
-.size{
-    font-weight: bold; /* Pogrubienie tekstu */
-}
+/* Styl wideo */
 .video-container {
     position: relative;
-    width: 100%; /* Wideo zajmuje całą szerokość kontenera */
-    padding-bottom: 56.25%; /* Proporcje 16:9 */
+    width: 100%;
+    max-width: 640px; /* Wideo na większych ekranach */
+    margin: 20px auto; /* Centrowanie wideo */
+    aspect-ratio: 16 / 9; /* Proporcje wideo */
     overflow: hidden;
-    border: 2px solid #ccc; /* Opcjonalnie: ramka wokół wideo */
-    border-radius: 10px; /* Opcjonalnie: zaokrąglenie rogów */
-    background-color: #000; /* Opcjonalnie: czarne tło przed załadowaniem wideo */
-    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* Opcjonalnie: cień */
+    border-radius: 10px; /* Zaokrąglone rogi */
+    background-color: #000; /* Czarne tło */
 }
 
 .video-container video {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Wideo dopasowuje się do szerokości kontenera */
-    height: 100%; /* Wideo zachowuje odpowiednie proporcje */
+    width: 100%;
+    height: 100%;
 }
 
-/* Styl galerii */
+/* Poprawka dla klikalności rozwijanego menu */
+header nav ul {
+    z-index: 10; /* Menu nad wideo */
+}
+
+.video-container {
+    z-index: 1; /* Wideo pod menu */
+}
+
+/* Galeria */
 .gallery {
     display: flex;
     flex-wrap: wrap;
@@ -212,10 +164,11 @@ table.pizza-menu .pizza-description {
     justify-content: center; /* Wyśrodkowanie zdjęć */
     margin-top: 20px;
 }
+
 .gallery figure {
     display: flex;
     flex-direction: column;
-    justify-content: space-between; /* Rozkłada elementy w ramce */
+    justify-content: space-between;
     align-items: center;
     border: 2px solid #ccc; /* Ramka wokół zdjęcia */
     padding: 10px;
@@ -234,10 +187,18 @@ table.pizza-menu .pizza-description {
 }
 
 .gallery figcaption {
-    margin-top: auto; /* Wypycha podpis na dół */
+    margin-top: auto;
     font-size: 0.9em;
     color: #333;
+}
+
+/* Stopka */
+footer {
     text-align: center;
+    padding: 15px 20px;
+    background-color: #e3a214; /* Ten sam kolor co header */
+    color: white;
+    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
 
 /* Responsywność galerii */
@@ -249,15 +210,4 @@ table.pizza-menu .pizza-description {
     .gallery figure {
         max-width: 150px;
     }
-}
-
-
-/* Stopka */
-footer {
-    text-align: center;
-    padding: 15px 20px;
-    background-color: #e3a214; /* Ten sam kolor co header */
-    color: white;
-    margin-top: 0; /* Usunięcie białego paska */
-    box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);
 }
