@@ -2,26 +2,39 @@ body {
     margin: 0;
     font-family: Arial, sans-serif;
 }
+
+/* Header */
 header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     padding: 10px 20px;
-    background-color: #e3a214;
+    background-color: #e3a214; /* Złoty kolor */
     color: white;
     position: relative;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
+
 header img {
-    height: 90px;
+    max-width: 100%;
+    height: auto;
+    max-height: 90px; /* Maksymalna wysokość logo na większych ekranach */
+    transition: all 0.3s ease; /* Płynne zmniejszanie */
 }
+
 header nav ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-    display: flex;
-    gap: 15px;
+    display: none;
+    flex-direction: column;
+    background-color: #e3a214; /* Ten sam kolor co header */
+    position: absolute;
+    top: 70px;
+    right: 20px;
+    width: 200px;
+    border-radius: 5px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    z-index: 10; /* Zapobiega zasłanianiu */
 }
+
 header nav ul li a {
     color: white;
     text-decoration: none;
@@ -29,34 +42,35 @@ header nav ul li a {
     border-radius: 5px;
     transition: background-color 0.3s ease;
 }
+
 header nav ul li a:hover {
     background-color: white;
     color: black;
 }
+
 header nav .menu-toggle {
     display: none;
     cursor: pointer;
     font-size: 1.5rem;
     color: white;
 }
-#responsive-img {
-    max-width: 100%;
-    height: auto;
-    display: block;
-    margin: 0 auto;
-}
-/* Responsywność */
+
+/* Responsywne logo i rozwijane menu */
 @media (max-width: 768px) {
+    header img {
+        max-height: 40px; /* Logo zmniejsza się na mniejszych ekranach */
+    }
+
     header nav .menu-toggle {
-        display: block;
+        display: block; /* Wyświetlanie ikony hamburgera */
     }
 
     header nav ul {
-        display: none;
+        display: none; /* Ukrycie menu na starcie */
         flex-direction: column;
-        background-color: #e1ad3e;
+        background-color: #e3a214; /* Kolor tła rozwijanego menu */
         position: absolute;
-        top: 80px;
+        top: 80px; /* Dopasowanie do zmniejszonego headera */
         right: 20px;
         width: 150px;
         border-radius: 5px;
@@ -64,19 +78,16 @@ header nav .menu-toggle {
     }
 
     header nav ul.active {
-        display: flex;
+        display: flex; /* Wyświetlanie menu po kliknięciu */
     }
 
     header nav ul li a {
         padding: 10px;
         text-align: center;
     }
-
-    header .logo {
-        text-align: left;
-        margin-left: 10px;
-    }
 }
+
+/* Sekcja główna */
 section {
     padding: 20px;
     background-color: #f4f4f4;
@@ -85,16 +96,27 @@ section {
 
 section h1 {
     font-size: 2rem;
-    color: #e3a214;
+    color: #e3a214; /* Kolor tytułu */
 }
+
 section p {
     font-size: 1rem;
     color: #333;
 }
+
+section img {
+    max-width: 100%; /* Obrazek w pełni responsywny */
+    height: auto;
+    border-radius: 10px; /* Delikatne zaokrąglenie */
+    margin-top: 20px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Subtelny cień */
+}
+
+/* Stopka */
 footer {
     text-align: center;
     padding: 15px 20px;
-    background-color: #e3a214;
+    background-color: #e3a214; /* Ten sam kolor co header */
     color: white;
     margin-top: 20px;
     box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1);

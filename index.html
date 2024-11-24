@@ -24,27 +24,26 @@
 <section>
     <h1>Witamy na stronie Pizzeria Wymarzona</h1>
     <p>Jesteśmy pizzerią z wieloletnim doświadczeniem. Zapraszamy na naszą pyszną i gorącą pizzę prosto z pieca opalanego drewnem już dziś</p>
-    <img src="wnetrze.jpg" alt="Wnętrze" id="responsive-img">
 </section>
 
 <footer>
     <p>&copy; 2024 Pizzeria Wymarzona. Wszystkie prawa zastrzeżone.</p>
 </footer>
-
 <script>
-    // Obsługa menu
-    const menuToggle = document.querySelector('.menu-toggle');
-    const navMenu = document.querySelector('header nav ul');
+// Obsługa kliknięcia w ikonę hamburgera
+const menuToggle = document.querySelector('.menu-toggle');
+const navMenu = document.querySelector('header nav ul');
 
-    menuToggle.addEventListener('click', () => {
-        navMenu.classList.toggle('active');
-    });
+menuToggle.addEventListener('click', () => {
+    navMenu.classList.toggle('active');
+});
 
-    window.addEventListener('resize', () => {
-        if (window.innerWidth > 768) {
-            navMenu.classList.remove('active');
-        }
-    });
+// Zamknięcie menu, jeśli okno jest większe niż 768px
+window.addEventListener('resize', () => {
+    if (window.innerWidth > 768) {
+        navMenu.classList.remove('active');
+    }
+});
 </script>
 
 </body>
