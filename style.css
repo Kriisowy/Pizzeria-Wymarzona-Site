@@ -266,7 +266,7 @@ header nav ul {
 }
 
 .gallery img:hover {
-    transform: scale(1.2); /* Powiększenie zdjęcia o 20% */
+    transform: scale(1.5); /* Powiększenie zdjęcia o 20% */
 }
 
 /* Responsywność galerii */
