@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cena zamówienia</title>
+    <style>
+         body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background: linear-gradient(135deg, #ffefd5, #e3a214);
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: 50px auto;
+            background: white;
+            padding: 20px;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .form-section, .preview-section, .summary-section {
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #e3a214;
+            font-size: 2.5rem;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            gap: 15px;
+        }
+
+        label {
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+
+        select, input[type="checkbox"], input[type="radio"] {
+            margin-top: 5px;
+            padding: 10px;
+            font-size: 1rem;
+            border: 2px solid #e3a214;
+            border-radius: 8px;
+        }
+
+        .extras {
+            text-align: left;
+            margin-left: 20px;
+        }
+
+        button {
+            padding: 10px 20px;
+            background-color: #e3a214;
+            color: white;
+            border: none;
+            border-radius: 8px;
+            cursor: pointer;
+            font-size: 1.1rem;
+            transition: transform 0.2s, background-color 0.2s;
+        }
+
+        button:hover {
+            background-color: #e3a214;
+            transform: scale(1.05);
+        }
+
+        .message {
+            margin-top: 20px;
+            padding: 15px;
+            background-color: #d4edda;
+            color: #155724;
+            border: 1px solid #c3e6cb;
+            border-radius: 8px;
+            display: none;
+        }
+
+        .footer {
+            margin-top: 30px;
+            font-size: 0.9rem;
+            color: #555;
+        }
+
+        .preview-section h2, .summary-section h2 {
+            color: #e3a214;
+            font-size: 1.5rem;
+        }
+
+        .preview-section ul, .summary-section ul {
+            list-style-type: none;
+            padding: 0;
+            font-size: 1rem;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="form-section">
+            <h1>Sprawdź swoje zamówienie</h1>
+            <form id="pizzaForm">
+                <label for="pizzaSize">Wybierz rozmiar:</label>
+                <select id="pizzaSize" required>
+                    <option value="" disabled selected>Wybierz rozmiar</option>
+                    <option value="Mała">Mała</option>
+                    <option value="Duża">Duża</option>
+                </select>
+                <div id="smallPizzaTypes">
+                    <label for="pizzaTypeSmall" id="smallPizzaTypeLabel" style="display: none;">Wybierz rodzaj: </label>
+                    <select id="pizzaTypeSmall" style="display: none;">
+                        <option value="" disabled selected>Wybierz rodzaj</option>
+                        <option value="Margherita">MARGHERITA</option>
+                        <option value="Marinara">MARINARA</option>
+                        <option value="Funghi">FUNGHI</option>
+                        <option value="Valentina">VALENTINA</option>
+                        <option value="Salame">SALAME</option>
+                        <option value="Vegetariana">VEGETARIANA</option>
+                        <option value="Vezuvio">VEZUVIO</option>
+                        <option value="Amore">AMORE</option>
+                        <option value="Siciliana">SICILIANA</option>
+                        <option value="Diavola">DIAVOLA</option>
+                        <option value="Rustica">RUSTICA</option>
+                        <option value="Fantazja">FANTAZJA</option>
+                        <option value="Piotra">PIOTRA</option>
+                        <option value="Extra picante">EXTRA PICANTE</option>
+                        <option value="Spinaci">SPINACI</option>
+                        <option value="Carciofi">CARCIOFI</option>
+                        <option value="Salsiccia">SALSICCIA</option>
+                        <option value="Parmeńska">PARMEŃSKA</option>
+                    </select>
+                </div>
+                <div id="styleSection">
+                    <label>Wybierz typ:</label>
+                    <div>
+                        <label><input type="radio" name="pizzaStyle" value="Cała">Cała</label><br>
+                        <label><input type="radio" name="pizzaStyle" value="Pół na pół">Pół na pół</label>
+                    </div>
+                    <label for="pizzaTypeLarge" id="largePizzaTypeLabel" style="display: none;">Wybierz rodzaj:</label>
+                    <select id="pizzaTypeLarge" style="display: none;">
+                        <option value="" disabled selected>Wybierz rodzaj</option>
+                        <option value="Margherita">MARGHERITA</option>
+                        <option value="Marinara">MARINARA</option>
+                        <option value="Funghi">FUNGHI</option>
+                        <option value="Valentina">VALENTINA</option>
+                        <option value="Salame">SALAME</option>
+                        <option value="Vegetariana">VEGETARIANA</option>
+                        <option value="Vezuvio">VEZUVIO</option>
+                        <option value="Amore">AMORE</option>
+                        <option value="Siciliana">SICILIANA</option>
+                        <option value="Diavola">DIAVOLA</option>
+                        <option value="Rustica">RUSTICA</option>
+                        <option value="Fantazja">FANTAZJA</option>
+                        <option value="Piotra">PIOTRA</option>
+                        <option value="Extra picante">EXTRA PICANTE</option>
+                        <option value="Spinaci">SPINACI</option>
+                        <option value="Carciofi">CARCIOFI</option>
+                        <option value="Salsiccia">SALSICCIA</option>
+                        <option value="Parmeńska">PARMEŃSKA</option>
+                    </select>
+                    <div id="halfOptions" style="display: none;">
+                        <label>Pierwsza połowa:</label>
+                        <select id="firstHalf">
+                            <option value="" disabled selected>Wybierz rodzaj</option>
+                            <option value="Margherita">MARGHERITA</option>
+                            <option value="Marinara">MARINARA</option>
+                            <option value="Funghi">FUNGHI</option>
+                            <option value="Valentina">VALENTINA</option>
+                            <option value="Salame">SALAME</option>
+                            <option value="Vegetariana">VEGETARIANA</option>
+                            <option value="Vezuvio">VEZUVIO</option>
+                            <option value="Amore">AMORE</option>
+                            <option value="Siciliana">SICILIANA</option>
+                            <option value="Diavola">DIAVOLA</option>
+                            <option value="Rustica">RUSTICA</option>
+                            <option value="Fantazja">FANTAZJA</option>
+                            <option value="Piotra">PIOTRA</option>
+                            <option value="Extra picante">EXTRA PICANTE</option>
+                            <option value="Spinaci">SPINACI</option>
+                            <option value="Carciofi">CARCIOFI</option>
+                            <option value="Salsiccia">SALSICCIA</option>
+                            <option value="Parmeńska">PARMEŃSKA</option>
+                        </select>
+                        <label>Druga połowa:</label>
+                        <select id="secondHalf">
+                            <option value="" disabled selected>Wybierz rodzaj</option>
+                            <option value="Margherita">MARGHERITA</option>
+                            <option value="Marinara">MARINARA</option>
+                            <option value="Funghi">FUNGHI</option>
+                            <option value="Valentina">VALENTINA</option>
+                            <option value="Salame">SALAME</option>
+                            <option value="Vegetariana">VEGETARIANA</option>
+                            <option value="Vezuvio">VEZUVIO</option>
+                            <option value="Amore">AMORE</option>
+                            <option value="Siciliana">SICILIANA</option>
+                            <option value="Diavola">DIAVOLA</option>
+                            <option value="Rustica">RUSTICA</option>
+                            <option value="Fantazja">FANTAZJA</option>
+                            <option value="Piotra">PIOTRA</option>
+                            <option value="Extra picante">EXTRA PICANTE</option>
+                            <option value="Spinaci">SPINACI</option>
+                            <option value="Carciofi">CARCIOFI</option>
+                            <option value="Salsiccia">SALSICCIA</option>
+                            <option value="Parmeńska">PARMEŃSKA</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="extras" style="display: none;">
+                    <label>Dodatkowe składniki:</label><br>
+                    <label><input type="checkbox" value="Mozzarella"> Mozzarella</label><br>
+                    <label><input type="checkbox" value="Bazylia"> Bazylia</label><br>
+                    <label><input type="checkbox" value="Czosnek"> Czosnek</label><br>
+                    <label><input type="checkbox" value="Oliwa"> Oliwa</label><br>
+                    <label><input type="checkbox" value="Oregano"> Oregano</label><br>
+                    <label><input type="checkbox" value="Pieczarki"> Pieczarki</label><br>
+                    <label><input type="checkbox" value="Cebula"> Cebula</label><br>
+                    <label><input type="checkbox" value="Pomidorki koktajlowe"> Pomidorki koktajlowe</label><br>
+                    <label><input type="checkbox" value="Brokuły"> Brokuły</label><br>
+                    <label><input type="checkbox" value="Cukinia"> Cukinia</label><br>
+                    <label><input type="checkbox" value="Papryka"> Papryka</label><br>
+                    <label><input type="checkbox" value="Kukurydza"> Kukurydza</label><br>
+                    <label><input type="checkbox" value="Szpinak"> Szpinak</label><br>
+                    <label><input type="checkbox" value="Karczochy"> Karczochy</label><br>
+                    <label><input type="checkbox" value="Czerwona cebula"> Czerwona cebula</label><br>
+                    <label><input type="checkbox" value="Rukola"> Rukola</label><br>
+                    <label><input type="checkbox" value="Oliwki czarne"> Oliwki czarne</label><br>
+                    <label><input type="checkbox" value="Oliwki zielone"> Oliwki zielone</label><br>
+                    <label><input type="checkbox" value="Boczek"> Boczek</label><br>
+                    <label><input type="checkbox" value="Szynka"> Szynka</label><br>
+                    <label><input type="checkbox" value="Salami"> Salami</label><br>
+                    <label><input type="checkbox" value="Salami pikantne"> Salami pikantne</label><br>
+                    <label><input type="checkbox" value="Tuńczyk"> Tuńczyk</label><br>
+                    <label><input type="checkbox" value="Kurczak"> Kurczak</label><br>
+                    <label><input type="checkbox" value="Spianata"> Spianata</label><br>
+                    <label><input type="checkbox" value="Salsiccia - farsz kiełbasiany"> Salsiccia - farsz kiełbasiany</label><br>
+                    <label><input type="checkbox" value="Szynka parmeńska"> Szynka parmeńska</label><br>
+                    <label><input type="checkbox" value="Ser ricotta"> Ser ricotta</label><br>
+                    <label><input type="checkbox" value="Ananas"> Ananas</label><br>
+                    <label><input type="checkbox" value="Papryczki Jalapeño"> Papryczki Jalapeño</label><br>
+                </div>
+                <div class="option">
+                    <label>Chcesz zjeść:</label><br>
+                    <label><input type="radio" name="pizzaOption" value="Na miejscu"> Na miejscu</label><br>
+                    <label><input type="radio" name="pizzaOption" value="Na wynos"> Na wynos</label>
+                </div>
+ 
+                <button type="button"  id="addToOrderButton" onclick="updatePreview(); addPizzaToOrder()">Dodaj do zamówienia</button>
+            </form>
+ 
+            <div class="message" id="orderMessage"></div>
+        </div>
+        <div class="preview-section">
+            <h2>Ostatnio wybrane:</h2>
+            <ul id="ingredientsPreview">
+                <li>Rodzaj pizzy: <span id="previewType">Nie wybrano</span></li>
+                <li>Rozmiar: <span id="previewSize">Nie wybrano</span></li>
+                <li>Typ: <span id="previewStyle">Cała</span></li>
+                <li>Dodatkowe składniki: <span id="previewExtras">Nie wybrano</span></li>
+                <li>Opcja: <span id="previewOption">Nie wybrano</span></li>
+            </ul>
+        </div>
+        <div class="summary-section">
+            <h2>Podsumowanie zamówienia:</h2>
+            <ul id="orderSummary"></ul>
+            <h3>Całkowita cena: <span id="totalOrderPrice">0</span> zł</h3>
+        </div>
+    </div>
+    <script src="script.js"></script> 
+</body>
+</html>
